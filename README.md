@@ -9,6 +9,12 @@ conversion into a **Windows desktop EXE application**.
 
 ---
 
+## 📸 Application Preview
+
+<img src="assets/screenshotex.png" alt="EmotionSense Application Preview" width="600"/>
+
+---
+
 ## 🚀 Features
 
 - Real-time webcam emotion detection
@@ -54,7 +60,8 @@ EmotionSense-AI/
 │
 ├── assets/              # Icons and images
 │   ├── emotion.ico
-│   └── emotion.png
+│   ├── emotion.png
+│   └── screenshotex.png
 │
 ├── tests/               # Test scripts
 │   └── test_camera.py
@@ -63,18 +70,17 @@ EmotionSense-AI/
 ├── requirements.txt
 └── .gitignore
 
-```
+````
 
 ---
 
 ## ▶️ How to Run the Project
 
 ### Step 1: Clone the repository
-
 ```bash
 git clone https://github.com/ShehanRUSL/EmotionSense-AI.git
 cd EmotionSense-AI
-```
+````
 
 ### Step 2: Install required libraries
 
@@ -92,8 +98,8 @@ python src/emotion_detector.py
 
 ## ⌨️ Keyboard Controls
 
-- **Q** → Quit the application
-- **S** → Take a screenshot
+* **Q** → Quit the application
+* **S** → Take a screenshot
 
 📌 Screenshots and logs are saved in the project directory.
 
@@ -101,9 +107,9 @@ python src/emotion_detector.py
 
 ## 📊 Output Files
 
-- `emotion_log.csv` → Emotion data with timestamps
-- Screenshot images (`.png`)
-- Emotion summary bar graph (shown after exit)
+* `emotion_log.csv` → Emotion data with timestamps
+* Screenshot images (`.png`)
+* Emotion summary bar graph (shown after exit)
 
 ---
 
@@ -114,26 +120,22 @@ using **PyInstaller**.
 
 The EXE version includes:
 
-- Webcam access
-- Real-time emotion detection
-- Emotion statistics
-- Custom application icon
+* Webcam access
+* Real-time emotion detection
+* Emotion statistics
+* Custom application icon
 
 ---
 
 ## 📌 Use Cases
 
-- AI & Machine Learning learning projects
-- Computer Vision practice
-- University / academic mini-projects
-- GitHub portfolio projects
+* AI & Machine Learning learning projects
+* Computer Vision practice
+* University / academic mini-projects
+* GitHub portfolio projects
 
 ---
 
 ## 📄 License
 
 This project is created for **educational and learning purposes**.
-
-```
-
-```
