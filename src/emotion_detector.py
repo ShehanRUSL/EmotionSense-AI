@@ -7,9 +7,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 from deepface import DeepFace
 
-# ===============================
-# PATH FIX FOR EXE
-# ===============================
+
 def resource_path(relative_path):
     try:
         base_path = sys._MEIPASS
@@ -17,21 +15,17 @@ def resource_path(relative_path):
         base_path = os.path.abspath(".")
     return os.path.join(base_path, relative_path)
 
-# ===============================
-# CAMERA
-# ===============================
+
 cap = cv2.VideoCapture(0)
 
-# Load Haarcascade locally
-cascade_path = resource_path("haarcascade_frontalface_default.xml")
+
+resource_path("models/haarcascade_frontalface_default.xml")
 face_cascade = cv2.CascadeClassifier(cascade_path)
 
 if face_cascade.empty():
     raise RuntimeError("Face cascade not loaded")
 
-# ===============================
-# EMOTION DATA
-# ===============================
+
 emotion_count = {
     "Happy": 0,
     "Sad": 0,
@@ -41,23 +35,16 @@ emotion_count = {
 
 last_emotion = "Normal"
 
-# ===============================
-# CSV LOG
-# ===============================
 csv_file = open("emotion_log.csv", "w", newline="")
 csv_writer = csv.writer(csv_file)
 csv_writer.writerow(["Time", "Emotion"])
 
-# ===============================
-# PERFORMANCE
-# ===============================
+
 frame_skip = 4
 frame_count = 0
 start_time = time.time()
 
-# ===============================
-# MAIN LOOP
-# ===============================
+
 while True:
     ret, frame = cap.read()
     if not ret:
@@ -73,7 +60,7 @@ while True:
 
         if frame_count % frame_skip == 0:
             try:
-                # IMPORTANT FIXES
+                
                 face_rgb = cv2.cvtColor(face, cv2.COLOR_BGR2RGB)
                 face_rgb = cv2.resize(face_rgb, (224, 224))
 

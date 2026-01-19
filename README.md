@@ -1,11 +1,11 @@
 # EmotionSense AI 🎭
 
-EmotionSense AI is a real-time emotion detection system that uses a webcam to
+EmotionSense AI is a **real-time emotion detection system** that uses a webcam to
 detect human emotions such as **Happy, Sad, Angry, and Normal** using
-Computer Vision and Deep Learning.
+**Computer Vision and Deep Learning**.
 
-The project is built using **Python, OpenCV, and DeepFace**, and it can also
-be converted into a **Windows desktop EXE application**.
+The project is built using **Python, OpenCV, and DeepFace**, and it also supports
+conversion into a **Windows desktop EXE application**.
 
 ---
 
@@ -14,15 +14,15 @@ be converted into a **Windows desktop EXE application**.
 - Real-time webcam emotion detection
 - Face detection with bounding boxes
 - Emotion classification:
-  - Happy
-  - Sad
-  - Angry
-  - Normal
+  - 😄 Happy
+  - 😢 Sad
+  - 😡 Angry
+  - 😐 Normal
 - Live FPS (performance counter)
-- Emotion statistics counter
-- Screenshot capture
+- Emotion statistics counter (on screen)
+- Screenshot capture using keyboard
 - Emotion data saved to CSV
-- Mood graph shown after exit
+- Mood analysis graph shown after exit
 - Windows EXE support with custom icon
 
 ---
@@ -35,6 +35,35 @@ be converted into a **Windows desktop EXE application**.
 - TensorFlow
 - Matplotlib
 - NumPy
+
+---
+
+## 📁 Project Structure
+
+```
+
+EmotionSense-AI/
+│
+├── src/                 # Main application source code
+│   ├── emotion_detector.py
+│   └── face_detection.py
+│
+├── models/              # Haarcascade and detection models
+│   ├── haarcascade_frontalface_default.xml
+│   └── haarcascade_frontalcatface.xml
+│
+├── assets/              # Icons and images
+│   ├── emotion.ico
+│   └── emotion.png
+│
+├── tests/               # Test scripts
+│   └── test_camera.py
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+
+```
 
 ---
 
@@ -56,7 +85,7 @@ pip install -r requirements.txt
 ### Step 3: Run the application
 
 ```bash
-python emotion_detector.py
+python src/emotion_detector.py
 ```
 
 ---
@@ -66,7 +95,7 @@ python emotion_detector.py
 - **Q** → Quit the application
 - **S** → Take a screenshot
 
-Screenshots and logs are saved in the project folder.
+📌 Screenshots and logs are saved in the project directory.
 
 ---
 
@@ -74,17 +103,20 @@ Screenshots and logs are saved in the project folder.
 
 - `emotion_log.csv` → Emotion data with timestamps
 - Screenshot images (`.png`)
-- Emotion summary graph after exit
+- Emotion summary bar graph (shown after exit)
 
 ---
 
 ## 🖥️ Desktop Application (EXE)
 
-This project can be converted into a Windows `.exe` file using PyInstaller.
+This project can be converted into a **Windows `.exe` desktop application**
+using **PyInstaller**.
+
 The EXE version includes:
 
-- Camera access
-- Emotion detection
+- Webcam access
+- Real-time emotion detection
+- Emotion statistics
 - Custom application icon
 
 ---
@@ -93,14 +125,14 @@ The EXE version includes:
 
 - AI & Machine Learning learning projects
 - Computer Vision practice
-- Portfolio / GitHub projects
-- Academic mini-projects
+- University / academic mini-projects
+- GitHub portfolio projects
 
 ---
 
 ## 📄 License
 
-This project is created for educational and learning purposes.
+This project is created for **educational and learning purposes**.
 
 ```
 
