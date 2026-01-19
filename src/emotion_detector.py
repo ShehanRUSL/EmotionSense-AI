@@ -91,10 +91,10 @@ while True:
             except:
                 pass
 
-        # Face box
+       
         cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
 
-        # Emotion text
+       
         cv2.putText(
             frame,
             last_emotion,
@@ -105,26 +105,20 @@ while True:
             2
         )
 
-    # ===============================
-    # FPS
-    # ===============================
+    
     fps = int(1 / (time.time() - start_time))
     start_time = time.time()
     cv2.putText(frame, f"FPS: {fps}", (20, 30),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0,255,255), 2)
 
-    # ===============================
-    # COUNTS
-    # ===============================
+    
     y = 60
     for emo, count in emotion_count.items():
         cv2.putText(frame, f"{emo}: {count}", (20, y),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255,255,255), 2)
         y += 25
 
-    # ===============================
-    # SHORTCUTS
-    # ===============================
+    
     cv2.putText(frame, "Q : Quit", (20, y + 10),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.55, (200,200,200), 2)
     cv2.putText(frame, "S : Screenshot", (20, y + 35),
@@ -138,16 +132,12 @@ while True:
     elif key == ord("s"):
         cv2.imwrite("screenshot.png", frame)
 
-# ===============================
-# CLEANUP
-# ===============================
+
 cap.release()
 cv2.destroyAllWindows()
 csv_file.close()
 
-# ===============================
-# GRAPH AFTER EXIT
-# ===============================
+
 plt.figure(figsize=(8,5))
 plt.bar(emotion_count.keys(), emotion_count.values())
 plt.title("Emotion Summary")
