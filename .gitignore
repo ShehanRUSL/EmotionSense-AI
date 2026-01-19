@@ -1,0 +1,8 @@
+venv/
+build/
+dist/
+__pycache__/
+*.exe
+*.spec
+emotion_log.csv
+screenshot.png
